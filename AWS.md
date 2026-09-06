@@ -64,5 +64,29 @@ Description: lazy and just copy group name.
 
 ## Getting started with AWS Linux
 
-`sudo apt update` - updates the package lists for upgrades and new package installations.
+1. `sudo apt update` - updates the package lists for upgrades and new package installations.
 
+2. `sudo apt upgrade` - upgrades the installed packages to their latest versions. This gests rid of any security vulnerabilities and ensures that the system is up to date. This is a "safe" command but doesnt change anything or break anything. 
+
+Then use `sudo apt upgrade` to upgrade the packages. This command will prompt you to confirm the upgrade process. Type 'y' and press Enter to proceed. It doesnt actually start using them.
+
+3. Install our packages `sudo apt install nginx` - installs the Nginx web server. Nginx is a popular open-source web server that can also be used as a reverse proxy, load balancer, and HTTP cache. It is known for its high performance, stability, and low resource consumption.
+
+4. Check `systemctl status nginx` - checks the status of the Nginx service. It will show whether the service is active (running) or inactive (stopped). If the service is not running, you can start it using `sudo systemctl start nginx`. q = graceful quit 
+
+## Deploying a simple web application
+
+1. Copy public ip address into internet. This will make it https but you need to change it back to http. You will see the default nginx page. This means that nginx is successfully installed and running on your EC2 instance. This is possible because we openened port 80 in the security group rules, allowing incoming HTTP traffic to reach the Nginx server.
+
+
+
+
+## Linux Comands
+
+1. `pwd` - print working directory, shows the current directory you are in.
+
+2. `cd ~` - change directory to the home directory of the current user.
+
+3. `ls` - list the contents of the current directory. You can use `ls -l` for a detailed view, which includes file permissions, ownership, size, and modification date.
+
+4. 
